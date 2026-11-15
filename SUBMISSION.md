@@ -137,3 +137,34 @@ level / timer), level banners, win + game-over screens with PLAY AGAIN.
   are two built-in `rbxasset://` sounds, pcall-guarded; best score uses
   DataStore only if Studio API access is enabled, else memory-only.
 - Full commit sha: `be93b1a9283e028e62687aeabb629ca1474c02f2` (short: be93b1a).
+
+- 2026-11-15 ~20:42 WIB: owner sent 1-start.png — WRONG CONTENT: it shows the Studio
+  editor of his OLD place (house on terrain), not the NEON RUSH Play screen. He was
+  told to re-open the FIXED game.rbxl (new link) and Play, then re-shoot. Valid
+  1-start.png still pending. (The game itself was reported running ~20:35.)
+
+- 2026-11-15 ~20:48 WIB: owner sent 1-start-2.png — ALSO WRONG: Play mode of the
+  DEFAULT Roblox baseplate template ("first creation" sign, avatar JR_mar), not
+  NEON RUSH. Project file verified: game.rbxl contains ONLY a dark baseplate +
+  the scripts (Server/ReplicatedStorage/StarterPlayerScripts) — no terrain, trees,
+  house or sign — so the owner is opening the wrong place/file. Told to use
+  File > Open from File on the FIXED game.rbxl and Play. Valid 1-start.png still pending.
+
+- 2026-11-15 ~20:56 WIB: owner sent gameplay shot (filed as 1_start.png, 1066x582,
+  32 KiB — WITHIN spec: long side <=1280, short >=480, <=256 KiB). Saved as
+  screenshots/2-play.png (it shows LEVEL 1 in progress, timer 57 — it is the PLAY
+  shot, not the start screen). 1-start.png (NEON RUSH panel) still pending retake;
+  3-end.png pending. Owner guided: Stop, Play again, shoot the start panel before
+  clicking PLAY.
+
+- 2026-11-15 ~20:58 WIB: 1-start.png RECEIVED + VALIDATED (NEON RUSH start panel,
+  PLAY button visible). Saved to screenshots/1-start.png. 2 of 3 shots done
+  (1-start, 2-play). 3-end.png still pending — owner guided to reach GAME OVER
+  (3 meteor hits or timer out) and shoot the end panel.
+
+- 2026-11-15 ~21:00 WIB: 3-end.png RECEIVED + VALIDATED (GAME OVER, SCORE 10,
+  CRYSTALS 1, LEVELS 0/3, NEW BEST SCORE). Saved to screenshots/3-end.png.
+  ALL 3 SHOTS DONE. Committed with the init.server.luau fix + rebuilt game.rbxl
+  (local commit, not yet pushed). Remaining: owner publishes to Roblox as NEW
+  experience + sets Public + sends play link; parent fills PLAY.json, commits,
+  bundles, checks, submits before 01:00 WIB 16 Nov.
