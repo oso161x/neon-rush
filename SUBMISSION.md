@@ -55,8 +55,16 @@ level / timer), level banners, win + game-over screens with PLAY AGAIN.
 - Screenshots in the repo: NONE yet — `screenshots/.gitkeep` only. The
   owner takes the real 3–4 captures in Studio (see below).
 - PLAY.json still the starter placeholder (place_id 0) — owner fills it in.
-- `bundle --dry-run` was started to validate the transcript path; result
-  pending at build completion — check the session handoff.
+- `bundle --dry-run` DONE (2026-11-15 ~19:20 WIB): finds this build
+  session (sessions/muse-app/15973058-...jsonl, 62 turns, 205 lines kept)
+  plus the parent session — transcript path works. At real bundle time
+  the parent must add: --prompt-file (the kickoff task's words,
+  --prompt-origin scheduled, --prompt-via the cron kickoff), --mcp none
+  (no MCP servers used), --harness-version, --effort default, and
+  --muse-usage rows (Muse app sessions carry no usage). It also lists 6
+  earlier sessions that wrote files this build read from memory — the
+  parent should scope the bundle to the parent + this build session
+  (threejs-fps-02 pattern) so unrelated sessions stay out.
 - No grade-local for this competition (server grades it).
 
 ## For the parent / owner — steps left, in order
