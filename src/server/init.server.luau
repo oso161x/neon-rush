@@ -6,7 +6,11 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 
-local GameServer = require(script.Parent:WaitForChild("GameServer"))
+-- NOTE (2026-11-15 fix): this file is the init script of its Rojo folder, so
+-- the folder IS this Script and GameServer is its CHILD — not a sibling under
+-- ServerScriptService. `script.Parent:WaitForChild("GameServer")` hung forever
+-- (server never started, no remotes, client hung, no UI at all in Play).
+local GameServer = require(script:WaitForChild("GameServer"))
 
 local remotes = Instance.new("Folder")
 remotes.Name = "NeonRushRemotes"
